@@ -1,0 +1,44 @@
+<%- include("header") -%>
+
+
+<div class="box" id="heading">
+
+  <h1> <%=  ListTitle   %></h1>
+</div>
+
+  <div class="box">
+
+    <%  for(var i = 0; i<=Lists.length-1; i++){ %>
+    <div class="item">
+      <input type="checkbox" />
+        <p> <%=  Lists[i] %> </p>
+    </div>
+
+    <%  } %>
+
+
+
+
+
+    <form class="item" action="/" method="post">
+
+
+      <!-- <label>Enter your shedule</label> -->
+      <input type="text" name="Todo" placeholder="New Item" autocomplete="off"/>
+      <button type="submit" name="list" value= <%= ListTitle %>> + </button>
+
+    </form>
+
+
+  </div>
+
+
+  <!-- <ul>
+  <%  for(var i = 0; i<=Lists.length-1; i++){ %>
+
+        <li> <%=  Lists[i] %>  </li>
+  <%  } %>
+
+  </ul> -->
+
+<%- include("footer") -%>
